@@ -1,0 +1,156 @@
+.food-item {
+  width: 100%;
+  margin: auto;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px #00000020;
+  transition: 0.3s;
+  animation: fadeIn 1s ease;
+}
+
+.food-item:hover{
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0px 0px 10px #00000050;
+}
+.food-item-img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.food-item-info {
+  padding: 10px 20px;
+  padding-bottom: 20px;
+  text-align: left;
+}
+
+.food-item-name-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.food-item-name-rating p {
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+
+.food-item-name-rating img {
+  width: 60px;
+}
+
+.food-item-desc {
+  font-size: 14px;
+  color: #747474;
+  margin-bottom: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+.food-item-price {
+  font-size: 20px;
+  color: tomato;
+  font-weight: 700;
+  margin-top: 5px;
+  font-family: "Poppins", sans-serif;
+}
+
+.food-item-img-container {
+  position: relative;
+}
+
+.food-item-img-container .add {
+  width: 35px;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.food-item-counter {
+  position: absolute;
+  align-items: center;
+  display: flex;
+  bottom: 15px;
+  right: 15px;
+  gap: 10px;
+  padding: 6px;
+  border-radius: 50px;
+  background-color: white;
+}
+
+.food-item-counter p {
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+}
+
+.food-item-counter img {
+  width: 25px;
+}
+
+@media (max-width: 500px) {
+  .food-item {
+    width: 100%;
+    display: flex;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px #00000020;
+    transition: 0.3s;
+    animation: fadeIn 1s ease;
+  }
+
+  .food-item-img {
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px 0px 0px 15px;
+  }
+
+  .food-item-name-rating {
+    display: flex;
+    margin-bottom: 3px;
+  }
+
+  .food-item-name-rating p {
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .food-item-name-rating img {
+    width: 50px;
+  }
+
+  .food-item-desc {
+    font-size: 11px;
+    margin-bottom: 5px;
+  }
+
+  .food-item-price {
+    font-size: 16px;
+    margin-top: 5px;
+  }
+
+  .food-item-img-container .add {
+    width: 25px;
+  }
+
+  .food-item-counter {
+    bottom: 15px;
+    right: 15px;
+    gap: 10px;
+    padding: 2px;
+    border-radius: 50px;
+    background-color: white;
+  }
+
+  .food-item-counter img {
+    width: 20px;
+  }
+
+  .food-item-info {
+    padding: 18px 18px;
+    padding-bottom: 10px;
+  }
+}

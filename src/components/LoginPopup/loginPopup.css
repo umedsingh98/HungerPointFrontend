@@ -1,0 +1,147 @@
+/* Keyframe for fade-in and scale animation */
+@keyframes fadeInScale {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Fade-out animation for a closing effect */
+  @keyframes fadeOutScale {
+    0% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+  }
+  
+  .login-popup {
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+      display: grid;
+      animation: fadeInScale 0.5s ease-in-out; /* Smooth popup entrance */
+  }
+  
+  .login-popup-container {
+      place-self: center;
+      width: max(23vw, 330px);
+      color: #000000;
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      padding: 30px 35px;
+      border-radius: 15px;
+      box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+      font-size: 14px;
+      font-family: "Poppins", sans-serif;
+      animation: fadeInScale 0.5s ease-in-out; /* Fade-in and scale up */
+  }
+  
+  .login-popup-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #333333;
+      font-size: 18px;
+      font-weight: 600;
+      font-family: "Poppins", sans-serif;
+  }
+  
+  .login-popup-title img {
+      width: 16px;
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+  }
+  
+  .login-popup-title img:hover {
+      transform: rotate(90deg); /* Rotate close button for interaction */
+  }
+  
+  .login-popup-input {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+  }
+  
+  .login-popup-input input {
+      outline: none;
+      border: 1px solid #dcdcdc;
+      padding: 12px 15px;
+      border-radius: 8px;
+      transition: border 0.3s ease, box-shadow 0.3s ease;
+      font-family: "Poppins", sans-serif;
+  }
+  
+  .login-popup-input input:focus {
+      border: 1px solid tomato;
+      box-shadow: 0px 0px 10px rgba(255, 99, 71, 0.5); /* Glowing focus effect */
+  }
+  
+  .login-popup-container button {
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      background: linear-gradient(45deg, tomato, orangered); /* Modern gradient background */
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .login-popup-container button:hover {
+      transform: translateY(-2px); /* Slight lift on hover */
+      background: linear-gradient(45deg, orangered, tomato); /* Gradient reverse */
+      box-shadow: 0px 5px 15px rgba(255, 99, 71, 0.4); /* Glowing shadow */
+  }
+  
+  .login-popup-condition {
+      display: flex;
+      align-items: center;
+      color: #555555;
+      gap: 10px;
+      font-size: 12px;
+      font-family: "Poppins", sans-serif;
+  }
+  
+  .login-popup-condition input {
+      cursor: pointer;
+      transition: transform 0.2s ease;
+  }
+  
+  .login-popup-condition input:checked {
+      transform: scale(1.1); /* Slight scale-up when checked */
+  }
+  
+  .login-popup p {
+      font-size: 13px;
+      font-family: "Poppins", sans-serif;
+      color: #555555;
+      text-align: center;
+  }
+  
+  .login-popup p span {
+      color: tomato;
+      cursor: pointer;
+      text-decoration: underline;
+      font-weight: 600;
+      margin-left: 2px;
+      transition: color 0.3s ease, text-decoration 0.3s ease;
+  }
+  
+  .login-popup p span:hover {
+      color: orangered; /* Color shift on hover */
+      text-decoration: none; /* Remove underline on hover */
+  }
+  

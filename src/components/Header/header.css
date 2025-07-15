@@ -1,0 +1,125 @@
+
+.header{
+    height: 44vw;
+    margin-bottom: 20px;
+    background: url("../../assets/frontend/header_img.png") no-repeat center;
+    background-size: cover;
+    position: relative;
+}
+
+.header-content{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.5vw;
+    max-width: 55%;
+    bottom: 10%;
+    left: 6vw;
+    animation: fadeIn 2s;
+}
+
+.header-content h2{
+    font-weight: 500;
+    color: white;
+    font-size: max(4.5vw, 22px);
+    font-family: "Poppins";
+    line-height:1.2;
+}
+
+.header-content p{
+    color: white;
+    font-size: max(1vw);
+    font-family: "Poppins";
+}
+
+.header-content button{
+    background-color: #ffffff;
+    color: black;
+    font-family: "Poppins";
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 15px 20px;
+    border: none;
+    font-size: max(1.1vw);
+    border-radius: 30px;
+    cursor: pointer;
+   
+}
+
+.header-content button:hover{
+  background-color: black;
+  color: white; 
+  transition: 0.2s ease;
+}
+
+@keyframes fadeIn{
+    0%{
+     opacity: 0;
+    }
+
+    100%{
+     opacity: 1;
+    }
+}
+
+@media (max-width: 1050px){
+    .header{
+        height: 44vw;
+    }
+
+    .header-content{
+        max-width: 48%;
+    }
+}
+
+
+@media (max-width: 750px){
+
+    .header{
+        height: 50vw;
+    }
+
+    .header-content{
+        max-width: 55%;
+    }
+    
+    .header-content p{
+      display: none;
+    }
+
+    .header-content button{
+        padding: 10px 14px;
+        font-size: 2vw;
+    }
+}
+
+
+@media (max-width: 500px){
+
+.header{
+    height: 70vw;
+    margin-bottom: 20px;
+    background: url("../../assets/frontend/header_img.png") no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+    .header-content{
+        max-width: 65%;
+        gap: 15px;
+    }
+    
+    .header-content h2{
+        font-size: 6vw;
+    }
+    .header-content p{
+      display: none;
+    }
+
+    .header-content button{
+        padding: 10px 14px;
+        font-size: 2.7vw;
+        font-weight: 700;
+        
+    }
+}
