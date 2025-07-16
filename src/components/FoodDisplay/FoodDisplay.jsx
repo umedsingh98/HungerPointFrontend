@@ -7,11 +7,11 @@ const FoodDisplay = ({ category }) => {
   const { food_list } = useContext(StoreContext);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    if (food_list) {
-      setLoading(false);
-    }
-  }, [food_list]);
+useEffect(() => {
+  if (Array.isArray(food_list) && food_list.length > 0) {
+    setLoading(false);
+  }
+}, [food_list]);
 
   return (
     <div className="food-display">
