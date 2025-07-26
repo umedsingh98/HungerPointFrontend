@@ -49,6 +49,20 @@ margin-bottom: 20px;
     background-color: #000ebf;
 }
 
+.order-message {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.order-message:not(:empty) {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
 @media (max-width: 650px) {
 
     .place-order{
