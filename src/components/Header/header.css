@@ -28,6 +28,7 @@
     max-width: 55%;
     bottom: 10%;
     left: 6vw;
+    z-index: 2;
     animation: fadeIn 2s;
 }
 
