@@ -70,8 +70,8 @@ const Navbar = ({setShowLogin}) => {
             <img src={assets.profile_icon} alt="user" />
             <ul className="nav-profile-dropdown">
               <li>
-                <Link to="/profile" style={{display: 'flex', alignItems: 'center', textDecoration: 'none', color: 'inherit'}}>
-                  <img src={assets.profile_icon} alt="" />
+                <Link to="/profile" style={{display: 'flex', gap:'10px', alignItems: 'center', textDecoration: 'none', color: 'inherit'}}>
+                  <img src={assets.user_icon} alt="" />
                   <p>Profile</p>
                 </Link>
               </li>
