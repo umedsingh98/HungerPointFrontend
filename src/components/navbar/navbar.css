@@ -115,7 +115,7 @@ right: -5px;
 .navbar-profile:hover .nav-profile-dropdown{
 display: flex;
 flex-direction: column;
-gap: 10px;
+gap: 12px;
 background-color: #fff2ef;
 border-radius: 5px;
 border: 1px solid tomato;
@@ -131,6 +131,10 @@ list-style: none;
     font-size: 14px;
     font-weight: 500;
     font-family: "Poppins";
+}
+
+.nav-profile-dropdown li img{
+    width: 26px;
 }
 
 .nav-profile-dropdown li:hover{
