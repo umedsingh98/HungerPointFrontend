@@ -11,7 +11,7 @@ const FoodItem = ({id,name,price,description,image}) => {
     return (
     <div className='food-item'>
      <div className="food-item-img-container">
-        <img className='food-item-img' src={"https://hungerpointbackend.onrender.com/images/"+image} alt="" />
+        <img loading="lazy" className='food-item-img' src={"https://hungerpointbackend.onrender.com/images/"+image} alt="" />
         {
             !cartItems?.[id]
             ?<img className='add' onClick={() => addToCart(id)} src={assets.add_icon_white} alt=""/>
