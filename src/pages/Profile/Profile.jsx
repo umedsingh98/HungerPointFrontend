@@ -2,6 +2,7 @@ import React, { useEffect, useState, useContext } from 'react';
 import './profile.css';
 import profileIcon from '../../assets/frontend/profile_icon.png';
 import { StoreContext } from '../../context/StoreContext';
+import user_icon from '../../assets/frontend/user_icon.png';
 
 const Profile = () => {
   const [user, setUser] = useState(null);
@@ -12,6 +13,7 @@ const Profile = () => {
   const token = localStorage.getItem('token');
   const { url } = useContext(StoreContext);
 
+
   useEffect(() => {
     fetch(url + '/api/user/profile', {
       headers: { token },
@@ -20,6 +22,7 @@ const Profile = () => {
       .then(data => {
         if (data.success) {
           setUser(data.user);
+            console.log("User profile: ", data.user);
           setForm({
             name: data.user.name || '',
             address: data.user.address || '',
@@ -70,7 +73,7 @@ const Profile = () => {
       <h2>My Profile</h2>
       <div className="profile-info">
         <img
-          src={user.avatar || profileIcon}
+          src={user_icon}
           alt="avatar"
           className="profile-avatar"
         />
@@ -101,7 +104,7 @@ const Profile = () => {
           <ul>
             {orders.map(order => (
               <li key={order._id} className="order-item">
-                <div><b>Date:</b> {new Date(order.date).toLocaleString()}</div>
+                <div><b>Date:</b> {new Date(order.createdAt || order.date).toLocaleString()}</div>
                 <div><b>Status:</b> {order.status}</div>
                 <div><b>Amount:</b> ${order.amount}</div>
                 <div><b>Items:</b> {order.items.map(item => {
