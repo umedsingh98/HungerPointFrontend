@@ -67,6 +67,12 @@ const PlaceOrder = () => {
       console.log("Order response status:", res.status);
       const data = await res.json();
       console.log("Order response data:", data);
+
+      if(!token){
+        setMessage("You must be logged in to place an order.");
+        setLoading(false);
+        return;
+      }
       
       if (data.success) {
         setMessage("Order placed successfully!");
