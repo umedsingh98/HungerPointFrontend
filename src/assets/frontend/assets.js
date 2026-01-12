@@ -56,6 +56,7 @@ import cross_icon from './cross_icon.png'
 import selector_icon from './selector_icon.png'
 import rating_starts from './rating_starts.png'
 import profile_icon from './profile_icon.png'
+import user_icon from './user_icon.png'
 import bag_icon from './bag_icon.png'
 import logout_icon from './logout_icon.png'
 import parcel_icon from './parcel_icon.png'
@@ -77,6 +78,7 @@ import parcel_icon from './parcel_icon.png'
     cross_icon,
     selector_icon,
     profile_icon,
+    user_icon,
     logout_icon,
     bag_icon,
     parcel_icon
